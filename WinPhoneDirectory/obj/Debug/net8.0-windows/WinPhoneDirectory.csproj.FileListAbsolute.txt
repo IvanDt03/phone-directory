@@ -1,0 +1,7 @@
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.Form1.resources
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.csproj.GenerateResource.cache
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.AssemblyInfoInputs.cache
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.AssemblyInfo.cs
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.csproj.CoreCompileInputs.cache
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.sourcelink.json
