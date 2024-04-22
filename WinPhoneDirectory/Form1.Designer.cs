@@ -90,6 +90,7 @@
             btnFill.TabIndex = 5;
             btnFill.Text = "Заполнить таблицу";
             btnFill.UseVisualStyleBackColor = true;
+            btnFill.Click += btnFill_Click;
             // 
             // btnSearch
             // 

@@ -52,9 +52,62 @@ namespace WinPhoneDirectory
 
             return result;
         }
-        public int AddItem(string FIO, string phoneNumer) { }
-        private void ClearVisit() { } // метод отчистки полей посещения
-        public bool RemoveItem(string phoneNumber, out int index) { }
-        public int FindItem(string phoneNumber, out string FIO, out int count) { }
+        public int AddItem(string FIO, string phoneNumer) 
+        {
+            int index = -1;
+
+            if (_curSize < SizeTable) // таблица не переполнена
+            {
+                index = HashFunction(phoneNumer);
+
+                while (!_hashTable[index]._empty)
+                    index = (index + _step) % SizeTable;
+
+                _hashTable[index]._empty = false;
+                _hashTable[index]._visit = true;
+                _hashTable[index]._person.FIO = FIO;
+                _hashTable[index]._person.PhoneNumber = phoneNumer;
+            }
+
+            return index;
+        }
+        private void ClearVisit() // метод отчистки полей посещения
+        {
+            for (int i = 0; i < SizeTable; ++i)
+                _hashTable[i]._visit = false;
+        }
+        public bool RemoveItem(string phoneNumber, out int index) 
+        { 
+            
+        }
+        public int FindItem(string phoneNumber, out string FIO, out int count) 
+        {
+            int result  = -1;
+            bool flagOK;
+            FIO = String.Empty;
+            count = 1;
+
+            ClearVisit();
+
+            int index = HashFunction(phoneNumber);
+            flagOK  = (_hashTable[index]._person.PhoneNumber == phoneNumber);
+
+            while (!flagOK && !_hashTable[index]._visit)
+            {
+                ++count;
+                _hashTable[index]._visit = true;
+                index = (index + _step) % SizeTable; // продолжаем поиск
+
+                flagOK = (_hashTable[index]._person.PhoneNumber == phoneNumber);
+            }
+
+            if (flagOK)
+            {
+                FIO = _hashTable[index]._person.FIO;
+                result = index;
+            }
+            return result;
+        }
+
     }
 }
