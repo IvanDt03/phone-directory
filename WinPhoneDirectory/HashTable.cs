@@ -16,7 +16,18 @@ namespace WinPhoneDirectory
 
         public HashTable(int sizeTable) { }
         public void HashInit() { }
-        private int HashFunction(string s) { }
+        private int HashFunction(string s) 
+        {
+            int result = 0;
+
+            for (int i = 0; i < s.Length; ++i) 
+            {
+                result += Convert.ToInt32(s[i]) * i;
+                result %= _sizeTable;
+            }
+
+            return result;
+        }
         public int AddItem(string FIO, string phoneNumer) { }
         private void ClearVisit() { } // метод отчистки полей посещения
         public bool RemoveItem(string phoneNumber, out int index) { }
