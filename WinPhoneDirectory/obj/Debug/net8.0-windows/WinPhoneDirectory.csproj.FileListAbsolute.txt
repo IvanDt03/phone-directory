@@ -5,3 +5,13 @@ C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\ob
 C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.AssemblyInfo.cs
 C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.csproj.CoreCompileInputs.cache
 C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.sourcelink.json
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\bin\Debug\net8.0-windows\WinPhoneDirectory.exe
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\bin\Debug\net8.0-windows\WinPhoneDirectory.deps.json
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\bin\Debug\net8.0-windows\WinPhoneDirectory.runtimeconfig.json
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\bin\Debug\net8.0-windows\WinPhoneDirectory.dll
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\bin\Debug\net8.0-windows\WinPhoneDirectory.pdb
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.dll
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\refint\WinPhoneDirectory.dll
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.pdb
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\WinPhoneDirectory.genruntimeconfig.cache
+C:\Users\vanya\Desktop\Программы C#\PhoneDirectory\WinPhoneDirectory\obj\Debug\net8.0-windows\ref\WinPhoneDirectory.dll

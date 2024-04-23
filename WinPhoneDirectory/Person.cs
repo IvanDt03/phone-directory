@@ -1,6 +1,6 @@
 ﻿namespace WinPhoneDirectory
 {
-    internal class Person
+    internal struct Person
     {
         public Person(string phoneNUmber, string FIO)
         {
@@ -16,7 +16,7 @@
             get => _phoneNumber;
             set
             {
-                if (value.Length != 11) throw new ArgumentException("Invalid phone number");
+                
                 _phoneNumber = value;
             }
         }

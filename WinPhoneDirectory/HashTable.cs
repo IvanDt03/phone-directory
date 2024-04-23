@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 namespace WinPhoneDirectory
 {
     // Разрешение коллизий будет осуществляться при помощи метода открытой адресации
-    internal class HashTable
+    internal class HashTable : IEnumerable
     {
         private int _sizeTable; // размер таблицы
         public int SizeTable
@@ -30,7 +31,7 @@ namespace WinPhoneDirectory
             _hashTable = new HashItem[SizeTable];
             HashInit();
         }
-        public void HashInit() 
+        private void HashInit() 
         {
             _curSize = 0;
 
@@ -67,6 +68,7 @@ namespace WinPhoneDirectory
                 _hashTable[index]._visit = true;
                 _hashTable[index]._person.FIO = FIO;
                 _hashTable[index]._person.PhoneNumber = phoneNumer;
+                ++_curSize;
             }
 
             return index;
@@ -77,24 +79,46 @@ namespace WinPhoneDirectory
                 _hashTable[i]._visit = false;
         }
         public bool RemoveItem(string phoneNumber, out int index) 
-        { 
-            
+        {
+            bool result = false;
+            index = 0;
+            if (_curSize != 0)
+            {
+                index = HashFunction(phoneNumber);
+
+                if (_hashTable[index]._person.PhoneNumber == phoneNumber)
+                {
+                    _hashTable[index]._empty = true;
+                    result = true;
+                    --_curSize;
+                }
+                else
+                {
+                    index = this.FindItem(phoneNumber, out _, out _);
+
+                    if (index != -1)
+                    {
+                        _hashTable[index]._empty = true;
+                        result = true;
+                        --_curSize;
+                    }
+                }
+            }
+            return result;
         }
-        public int FindItem(string phoneNumber, out string FIO, out int count) 
+        public int FindItem(string phoneNumber, out string FIO, out int index) 
         {
             int result  = -1;
             bool flagOK;
             FIO = String.Empty;
-            count = 1;
 
             ClearVisit();
 
-            int index = HashFunction(phoneNumber);
+            index = HashFunction(phoneNumber);
             flagOK  = (_hashTable[index]._person.PhoneNumber == phoneNumber);
 
             while (!flagOK && !_hashTable[index]._visit)
             {
-                ++count;
                 _hashTable[index]._visit = true;
                 index = (index + _step) % SizeTable; // продолжаем поиск
 
@@ -108,6 +132,10 @@ namespace WinPhoneDirectory
             }
             return result;
         }
-
+        public IEnumerator GetEnumerator()
+        {
+            foreach (var item in _hashTable)
+                yield return item;
+        }
     }
 }

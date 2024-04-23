@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            phoneTextBox = new TextBox();
+            FIOtextBox = new TextBox();
             btnAdd = new Button();
             btnRemove = new Button();
             btnFill = new Button();
             btnSearch = new Button();
-            button5 = new Button();
+            btnClose = new Button();
             label1 = new Label();
             label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -50,19 +50,19 @@
             dataGridView1.Size = new Size(477, 609);
             dataGridView1.TabIndex = 0;
             // 
-            // textBox1
+            // phoneTextBox
             // 
-            textBox1.Location = new Point(500, 117);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(168, 27);
-            textBox1.TabIndex = 1;
+            phoneTextBox.Location = new Point(500, 117);
+            phoneTextBox.Name = "phoneTextBox";
+            phoneTextBox.Size = new Size(168, 27);
+            phoneTextBox.TabIndex = 1;
             // 
-            // textBox2
+            // FIOtextBox
             // 
-            textBox2.Location = new Point(707, 117);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(257, 27);
-            textBox2.TabIndex = 2;
+            FIOtextBox.Location = new Point(707, 117);
+            FIOtextBox.Name = "FIOtextBox";
+            FIOtextBox.Size = new Size(257, 27);
+            FIOtextBox.TabIndex = 2;
             // 
             // btnAdd
             // 
@@ -72,6 +72,7 @@
             btnAdd.TabIndex = 3;
             btnAdd.Text = "Добавить абонента";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnRemove
             // 
@@ -81,14 +82,15 @@
             btnRemove.TabIndex = 4;
             btnRemove.Text = "Удалить абонента";
             btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.Click += btnRemove_Click;
             // 
             // btnFill
             // 
             btnFill.Location = new Point(707, 249);
             btnFill.Name = "btnFill";
-            btnFill.Size = new Size(190, 29);
+            btnFill.Size = new Size(190, 52);
             btnFill.TabIndex = 5;
-            btnFill.Text = "Заполнить таблицу";
+            btnFill.Text = "Получить данные из файла";
             btnFill.UseVisualStyleBackColor = true;
             btnFill.Click += btnFill_Click;
             // 
@@ -100,15 +102,17 @@
             btnSearch.TabIndex = 6;
             btnSearch.Text = "Найти абонента";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
-            // button5
+            // btnClose
             // 
-            button5.Location = new Point(838, 569);
-            button5.Name = "button5";
-            button5.Size = new Size(126, 29);
-            button5.TabIndex = 7;
-            button5.Text = "Завершить";
-            button5.UseVisualStyleBackColor = true;
+            btnClose.Location = new Point(838, 569);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(126, 29);
+            btnClose.TabIndex = 7;
+            btnClose.Text = "Завершить";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += button5_Click;
             // 
             // label1
             // 
@@ -135,13 +139,13 @@
             ClientSize = new Size(976, 610);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button5);
+            Controls.Add(btnClose);
             Controls.Add(btnSearch);
             Controls.Add(btnFill);
             Controls.Add(btnRemove);
             Controls.Add(btnAdd);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(FIOtextBox);
+            Controls.Add(phoneTextBox);
             Controls.Add(dataGridView1);
             Name = "Form1";
             Text = "Form1";
@@ -153,13 +157,13 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox phoneTextBox;
+        private TextBox FIOtextBox;
         private Button btnAdd;
         private Button btnRemove;
         private Button btnFill;
         private Button btnSearch;
-        private Button button5;
+        private Button btnClose;
         private Label label1;
         private Label label2;
     }
